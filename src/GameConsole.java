@@ -3,14 +3,14 @@ import java.util.Scanner;
 /**
  * The GameConsole class interacts with the user.
  * @author Patinya Yongyai
- *
+ * @version 20.01.2017
  */
 public class GameConsole {
 	
 	/**
 	 * For control system of GuessingGame
-	 * @param game
-	 * @return
+	 * @param game for calling some method from GuessingGame
+	 * @return the solution (the guessed secret)
 	 */
 	public int play(GuessingGame game){
 		Scanner scanner = new Scanner(System.in);

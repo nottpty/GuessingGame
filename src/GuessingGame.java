@@ -2,6 +2,7 @@ import java.util.Random;
 /**
  * Game of guessing a secret number.
  * @author Patinya Yongyai
+ * @version 20.01.2017
  */
 
 public class GuessingGame {
@@ -23,23 +24,23 @@ public class GuessingGame {
 	
 	/**
 	 * 
-	 * @return
+	 * @return number of guesses
 	 */
 	public int getCount(){
 		return counter;
 	}
 	
 	/**
-	 * 
+	 * For counting guesses from user
 	 */
 	public void count(){
 		++counter;
 	}
 	
 	/**
-	 * 
-	 * @param number
-	 * @return
+	 * Check number from user to tell hint to user
+	 * @param number is a number from user
+	 * @return true if a number from user equal with secret number. Return false if a number from user not equal with a secret number.
 	 */
 	public boolean guess(int number){
 		if(number == secret){
