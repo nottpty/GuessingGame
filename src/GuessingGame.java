@@ -38,7 +38,7 @@ public class GuessingGame {
 	}
 	
 	/**
-	 * Check number from user to tell hint to user
+	 * Check a number from user to show hint to user
 	 * @param number is a number from user
 	 * @return true if a number from user equal with secret number. Return false if a number from user not equal with a secret number.
 	 */
