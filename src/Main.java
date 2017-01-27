@@ -9,8 +9,6 @@ public class Main {
 	 * @param args not used
 	 */
 	public static void main(String[] args){
-		GuessingGame game = new GuessingGame(100);
-		GameConsole ui = new GameConsole();
-		ui.play(game);
+                new GameConsole().play(new GuessingGame(100));
 	}
 }
