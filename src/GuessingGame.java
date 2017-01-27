@@ -6,8 +6,8 @@ import java.util.Random;
  */
 
 public class GuessingGame {
-	private int upperBound;
-	private int secret;
+	private final int upperBound;
+	private final int secret;
 	private String hint;
 	private int counter;
 	
@@ -51,8 +51,9 @@ public class GuessingGame {
 			setHint("Sorry, your guess is too small.");
 		}
 		else{
-			setHint("Sorry, you're guess is too large.");
+			setHint("Sorry, your guess is too large.");
 		}
+                this.count();
 		return false;
 	}
 	
