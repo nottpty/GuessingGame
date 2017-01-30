@@ -23,9 +23,8 @@ public class GameConsole {
 			System.out.print(promptString);
 			input = scanner.nextInt();
 			game.guess(input);
-			game.count();
 			System.out.println(game.getHint());
-		}while(!game.guess(input));
+		}while(!game.getStatus());
 		return 1;
 	}
 }
