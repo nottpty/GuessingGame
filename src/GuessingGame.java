@@ -2,7 +2,7 @@ import java.util.Random;
 /**
  * Game of guessing a secret number.
  * @author Patinya Yongyai
- * @version 20.01.2017
+ * @version 1.02.2017
  */
 
 public class GuessingGame {
@@ -10,7 +10,6 @@ public class GuessingGame {
 	private int secret;
 	private String hint;
 	private int counter;
-	private boolean status;
 	
 	/**
 	 * Initialize a new game.
@@ -18,10 +17,9 @@ public class GuessingGame {
 	 */
 	public GuessingGame(int upperBound){
 		this.upperBound = upperBound;
-		secret = getRandomNumber(upperBound);
-		hint = "I'm thinking of a number between 1 and "+upperBound;
+		this.secret = getRandomNumber(upperBound);
+		this.setHint("I'm thinking of a number between 1 and "+upperBound);
 		counter = 0;
-		status = false;
 	}
 	
 	/**
@@ -40,14 +38,6 @@ public class GuessingGame {
 	}
 	
 	/**
-	 * Check status of guessing game.
-	 * @return current status of guessing game. 
-	 */
-	public boolean getStatus(){
-		return this.status;
-	}
-	
-	/**
 	 * Check a number from user to show hint to user
 	 * @param number is a number from user
 	 * @return true if a number from user equal with secret number. Return false if a number from user not equal with a secret number.
@@ -56,14 +46,13 @@ public class GuessingGame {
 		count();
 		if(number == secret){
 			setHint("\nCorrect. The secret is "+secret+".\nYou used "+getCount()+" guesses.");
-			status = true;
 			return true;
 		}
 		else if(number < secret){
 			setHint("Sorry, your guess is too small.");
 		}
 		else{
-			setHint("Sorry, you're guess is too large.");
+			setHint("Sorry, your guess is too large.");
 		}
 		return false;
 	}
