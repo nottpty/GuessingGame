@@ -63,10 +63,14 @@ public class GameUI {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (game.guess(Integer.parseInt(inputField.getText())))
-					enterButton.setEnabled(false);
-				countGuess.setText("You used " + game.getCount() + " guesses");
-				hint.setText(game.getHint());
+				try {
+					if (game.guess(Integer.parseInt(inputField.getText())))
+						enterButton.setEnabled(false);
+					countGuess.setText("You used " + game.getCount() + " guesses");
+					hint.setText(game.getHint());
+				} catch (Exception e2) {
+					throw new NumberFormatException("Please input your number.");
+				}
 
 			}
 		});
