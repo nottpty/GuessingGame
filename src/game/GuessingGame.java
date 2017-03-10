@@ -1,3 +1,4 @@
+package game;
 import java.util.Random;
 /**
  * Game of guessing a secret number.
@@ -49,10 +50,10 @@ public class GuessingGame {
 			return true;
 		}
 		else if(number < secret){
-			setHint("Sorry, your guess is too small.");
+			setHint(number+ " is too small, Try again.");
 		}
 		else{
-			setHint("Sorry, your guess is too large.");
+			setHint(number+ " is too large, Try again.");
 		}
 		return false;
 	}

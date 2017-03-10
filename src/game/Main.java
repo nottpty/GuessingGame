@@ -1,3 +1,7 @@
+package game;
+
+import ui.GameUI;
+
 /**
  * A main class to create objects and run the program.
  * @author Patinya Yongyai
@@ -10,7 +14,7 @@ public class Main {
 	 */
 	public static void main(String[] args){
 		GuessingGame game = new GuessingGame(100);
-		GameConsole ui = new GameConsole();
-		ui.play(game);
+		GameUI gui = new GameUI( game );
+		gui.run();
 	}
 }
