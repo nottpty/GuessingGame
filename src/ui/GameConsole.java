@@ -1,5 +1,7 @@
-package game;
+package ui;
 import java.util.Scanner;
+
+import game.GuessingGame;
 
 /**
  * The GameConsole class interacts with the user.

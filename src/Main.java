@@ -1,5 +1,6 @@
-package game;
 
+
+import game.GuessingGame;
 import ui.GameUI;
 
 /**
